@@ -75,6 +75,23 @@ public class Basic1 {
             System.out.println("The triangle does not exist");
         }
 
+        //2.Найти max{min(a, b), min(c, d)}
+        System.out.println("Task 2 branching: ");
+        int numberA = 3;
+        int numberB = 6;
+        int numberC = 4;
+        int numberD = 2;
+        int funcMin1;
+        int funcMin2;
+        int funcMax;
+
+        funcMin1 = (numberA > numberB) ? numberB : numberA;
+        System.out.println(funcMin1);
+        funcMin2 = (numberC > numberD) ? numberD : numberC;
+        System.out.println(funcMin2);
+        funcMax = (funcMin1 > funcMin2) ? funcMin1 : funcMin2;
+        System.out.println("Max value this function: " + funcMax);
+
         //3. Даны три точки А(х1,у1), В(х2,у2) и С(х3,у3). Определить, будут ли они расположены на одной прямой.
         System.out.println("Task 3 branching: ");
         int coordinateX1 = 0;
@@ -85,6 +102,8 @@ public class Basic1 {
         int coordinateY3 = 2;
         if (coordinateX1 % coordinateX2 == 0 && coordinateX2 % coordinateX3 == 0 && coordinateX1 % coordinateX3 == 0 && coordinateY1 % coordinateY2 == 0 && coordinateY2 % coordinateY3 == 0 && coordinateY1 % coordinateY3 == 0) {
             System.out.println("These points will be on one straight line");
+        } else {
+            System.out.println("These points will not be on the same line");
         }
 
         //4. Заданы размеры А, В прямоугольного отверстия и размеры х, у, z  кирпича. Определить, пройдет ли кирпич через отверстие.
